@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "ChakraPetch";
+  src: url("../font/ChakraPetch-Bold.ttf");
+}
+* {
+  font-family: "ChakraPetch";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.centerText {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.centerText h2 {
+  margin: 15px 0;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+#home {
+  height: 100vh;
+  padding: 10px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#home h1 {
+  color: #272341;
+  margin: 0 0 32px;
+  font-size: 56px;
+  font-weight: 700;
+}
+#home h1 span {
+  color: #00cdac;
+}
+#home a {
+  font-size: 24px;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #00cdac;
+  color: #00cdac;
+  background: transparent;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#aboutUs {
+  padding: 50px 5%;
+  background-color: #00cdac;
+  min-height: 100vh;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+#aboutUs #parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+#aboutUs #parent .child:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  height: 50vh;
+}
+#aboutUs #parent .child:nth-child(1) img {
+  width: 80%;
+  height: 100%;
+  border-radius: 15px;
+}
+#aboutUs #parent .child:nth-child(2) {
+  padding-bottom: 50px;
+}
+#aboutUs #parent .child:nth-child(2) p {
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+#aboutUs #parent .child:nth-child(2) a {
+  text-decoration: none;
+  margin-top: 15px;
+  padding: 12px 15px;
+  background-color: white;
+  border: 0;
+  text-transform: capitalize;
+  border-radius: 15px;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+#aboutUs #parent .child:nth-child(2) h3 {
+  color: #272341;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+#aboutUs #parent .child:nth-child(2) .skill {
+  display: flex;
+  flex-wrap: wrap;
+}
+#aboutUs #parent .child:nth-child(2) .skill p {
+  padding: 10px 19px;
+  background-color: #09f9d1;
+  color: rgba(0, 0, 0, 0.725);
+  font-size: 15px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 5px 5px 5px gray;
+}
+
+#project {
+  min-height: 100vh;
+  padding: 20px 5%;
+}
+#project #parent {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+#project #parent .child {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  padding: 20px 0;
+}
+#project #parent .child img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#project #parent .child a {
+  font-size: 16px;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #00cdac;
+  color: #00cdac;
+  text-transform: capitalize;
+}
+#project #parent .child h3 {
+  color: #272341;
+  font-size: 25px;
+  margin: 0 0 18px;
+  font-weight: 700;
+}
+#project #parent .child p {
+  color: #272341;
+  font-size: 16px;
+  margin: 0 0 30px;
+}
+
+#contactUs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px 0;
+  background-color: #00cdac;
+  -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
+}
+#contactUs h2 {
+  color: #fff;
+  font-size: 40px;
+  margin: 45px 0 45px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#contactUs a {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 24px;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+@media (max-width: 576px) {
+  #home h1 {
+    font-size: 29px;
+  }
+  #home a {
+    font-size: 18px;
+  }
+  .centerText h2 {
+    font-size: 45px;
+  }
+  #aboutUs #parent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #aboutUs #parent .child:nth-child(1) img {
+    width: 100%;
+  }
+  #project #parent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #project #parent .child p {
+    font-size: 12px;
+  }
+  #contactUs a {
+    font-size: 19px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  #home h1 {
+    font-size: 45px;
+  }
+  #home a {
+    font-size: 27px;
+  }
+  .centerText h2 {
+    font-size: 45px;
+  }
+  #aboutUs #parent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #project #parent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}/*# sourceMappingURL=style.css.map */
